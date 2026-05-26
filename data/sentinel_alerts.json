@@ -1,0 +1,82 @@
+[
+  {
+    "alert_id": "SENT-2026-001",
+    "title": "Impossible Travel Detected",
+    "description": "User USR-FIN-042 logged in from New York, USA at 08:00 UTC and from Moscow, Russia at 09:45 UTC — physically impossible travel distance in 1 hour 45 minutes.",
+    "severity": "High",
+    "user_id": "USR-FIN-042",
+    "source_ip": "185.220.101.45",
+    "timestamp": "2026-05-26T09:45:00Z",
+    "raw_event": {
+      "event_type": "SignInLogs",
+      "location_1": {"city": "New York", "country": "USA", "ip": "72.14.192.10"},
+      "location_2": {"city": "Moscow", "country": "Russia", "ip": "185.220.101.45"},
+      "time_difference_minutes": 105,
+      "distance_km": 7500
+    }
+  },
+  {
+    "alert_id": "SENT-2026-002",
+    "title": "Privileged Account Brute Force Attack",
+    "description": "Admin account USR-ADMIN-007 received 47 failed login attempts within 3 minutes from IP 192.168.100.55 followed by a successful login.",
+    "severity": "Critical",
+    "user_id": "USR-ADMIN-007",
+    "source_ip": "192.168.100.55",
+    "timestamp": "2026-05-26T02:15:00Z",
+    "raw_event": {
+      "event_type": "SecurityAlert",
+      "failed_attempts": 47,
+      "success_after_failures": true,
+      "time_window_minutes": 3,
+      "target_account": "domain_admin"
+    }
+  },
+  {
+    "alert_id": "SENT-2026-003",
+    "title": "Anomalous Mass Data Exfiltration",
+    "description": "User USR-ENG-117 downloaded 45GB of data from SharePoint and OneDrive between 02:00-04:00 UTC — 800% above their baseline activity.",
+    "severity": "High",
+    "user_id": "USR-ENG-117",
+    "source_ip": "10.0.1.45",
+    "timestamp": "2026-05-26T04:00:00Z",
+    "raw_event": {
+      "event_type": "CloudAppActivity",
+      "bytes_downloaded": 48318382080,
+      "files_accessed": 2847,
+      "time_window": "02:00-04:00 UTC",
+      "baseline_daily_mb": 50,
+      "actual_mb": 46080
+    }
+  },
+  {
+    "alert_id": "SENT-2026-004",
+    "title": "Lateral Movement — Service Account Anomaly",
+    "description": "Service account SVC-BACKUP-001 accessed 23 sensitive systems it has never accessed before, including HR, Finance, and R&D databases within 15 minutes.",
+    "severity": "Critical",
+    "user_id": "SVC-BACKUP-001",
+    "source_ip": "10.0.5.200",
+    "timestamp": "2026-05-26T01:30:00Z",
+    "raw_event": {
+      "event_type": "AnomalousActivity",
+      "new_systems_accessed": 23,
+      "systems": ["HR-DB", "Finance-DB", "RD-FileShare", "Payroll-System"],
+      "time_window_minutes": 15,
+      "account_type": "service_account"
+    }
+  },
+  {
+    "alert_id": "SENT-2026-005",
+    "title": "Login from Tor Exit Node",
+    "description": "User USR-MKT-033 authenticated successfully from known Tor exit node IP 185.220.102.8.",
+    "severity": "Medium",
+    "user_id": "USR-MKT-033",
+    "source_ip": "185.220.102.8",
+    "timestamp": "2026-05-26T14:22:00Z",
+    "raw_event": {
+      "event_type": "SignInLogs",
+      "ip_reputation": "Tor Exit Node",
+      "threat_intel_match": true,
+      "authentication_method": "Password + MFA"
+    }
+  }
+]

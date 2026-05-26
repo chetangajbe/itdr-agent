@@ -1,0 +1,158 @@
+[
+  {
+    "user_id": "USR-FIN-042",
+    "display_name": "Priya Sharma",
+    "email": "priya.sharma@company.com",
+    "department": "Finance",
+    "role": "Senior Financial Analyst",
+    "manager": "rajesh.kumar@company.com",
+    "risk_score": 42.0,
+    "account_status": "active",
+    "is_privileged": false,
+    "location": "Mumbai, India",
+    "last_login": "2026-05-26T08:00:00Z",
+    "entitlements": [
+      "Finance-Portal-ReadWrite",
+      "SAP-Finance-User",
+      "SharePoint-Finance-Team",
+      "Oracle-ERP-Finance",
+      "Tableau-Finance-Reports"
+    ],
+    "recent_access": [
+      "Finance-Portal",
+      "SAP-ERP",
+      "SharePoint-Finance",
+      "Oracle-ERP"
+    ],
+    "sailpoint_risk_factors": [
+      "Access to sensitive financial data",
+      "Cross-department data access"
+    ]
+  },
+  {
+    "user_id": "USR-ADMIN-007",
+    "display_name": "Arjun Mehta",
+    "email": "arjun.mehta@company.com",
+    "department": "IT Infrastructure",
+    "role": "Domain Administrator",
+    "manager": "ciso@company.com",
+    "risk_score": 78.0,
+    "account_status": "active",
+    "is_privileged": true,
+    "location": "Hyderabad, India",
+    "last_login": "2026-05-26T02:15:00Z",
+    "entitlements": [
+      "Domain-Admin",
+      "Azure-AD-Global-Admin",
+      "AWS-Root-Access",
+      "SailPoint-Admin",
+      "ServiceNow-Admin",
+      "All-Systems-Admin",
+      "PAM-CyberArk-Admin",
+      "Firewall-Admin"
+    ],
+    "recent_access": [
+      "Active-Directory",
+      "Azure-Portal",
+      "AWS-Console",
+      "SailPoint-Admin-Console"
+    ],
+    "sailpoint_risk_factors": [
+      "Highly privileged account",
+      "Access to all critical systems",
+      "Recent after-hours logins",
+      "SoD violations flagged"
+    ]
+  },
+  {
+    "user_id": "USR-ENG-117",
+    "display_name": "Sneha Patil",
+    "email": "sneha.patil@company.com",
+    "department": "Engineering",
+    "role": "Software Engineer",
+    "manager": "tech.lead@company.com",
+    "risk_score": 35.0,
+    "account_status": "active",
+    "is_privileged": false,
+    "location": "Pune, India",
+    "last_login": "2026-05-26T04:00:00Z",
+    "entitlements": [
+      "GitHub-Enterprise",
+      "JIRA-Engineering",
+      "SharePoint-Engineering",
+      "AWS-Dev-Access",
+      "OneDrive-Standard"
+    ],
+    "recent_access": [
+      "GitHub",
+      "JIRA",
+      "SharePoint",
+      "AWS-Dev"
+    ],
+    "sailpoint_risk_factors": [
+      "Recent large file access anomaly",
+      "Access to source code repositories"
+    ]
+  },
+  {
+    "user_id": "SVC-BACKUP-001",
+    "display_name": "Backup Service Account",
+    "email": "svc-backup@company.com",
+    "department": "IT Operations",
+    "role": "Service Account — Backup",
+    "manager": "it-ops@company.com",
+    "risk_score": 88.0,
+    "account_status": "active",
+    "is_privileged": true,
+    "location": "Datacenter-01",
+    "last_login": "2026-05-26T01:30:00Z",
+    "entitlements": [
+      "Backup-Systems-ReadWrite",
+      "Storage-Admin",
+      "DB-Backup-All",
+      "FileShare-ReadWrite-All"
+    ],
+    "recent_access": [
+      "Backup-Server",
+      "NAS-Storage",
+      "HR-DB",
+      "Finance-DB",
+      "RD-FileShare",
+      "Payroll-System"
+    ],
+    "sailpoint_risk_factors": [
+      "Service account with broad access",
+      "Accessing systems outside normal scope",
+      "Possible lateral movement pattern",
+      "No human oversight account"
+    ]
+  },
+  {
+    "user_id": "USR-MKT-033",
+    "display_name": "Rahul Verma",
+    "email": "rahul.verma@company.com",
+    "department": "Marketing",
+    "role": "Digital Marketing Specialist",
+    "manager": "marketing.head@company.com",
+    "risk_score": 20.0,
+    "account_status": "active",
+    "is_privileged": false,
+    "location": "Delhi, India",
+    "last_login": "2026-05-26T14:22:00Z",
+    "entitlements": [
+      "Marketing-Portal",
+      "HubSpot-Marketing",
+      "Google-Analytics",
+      "SharePoint-Marketing",
+      "Canva-Enterprise"
+    ],
+    "recent_access": [
+      "Marketing-Portal",
+      "HubSpot",
+      "Google-Analytics"
+    ],
+    "sailpoint_risk_factors": [
+      "Login from unusual IP range"
+    ]
+  }
+]

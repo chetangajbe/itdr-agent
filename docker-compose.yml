@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  itdr-agent:
+    build: .
+    container_name: itdr-agent
+    ports:
+      - "8000:8000"
+    environment:
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+      - SAILPOINT_BASE_URL=${SAILPOINT_BASE_URL}
+      - SAILPOINT_CLIENT_ID=${SAILPOINT_CLIENT_ID}
+      - SAILPOINT_CLIENT_SECRET=${SAILPOINT_CLIENT_SECRET}
+      - SENTINEL_WORKSPACE_ID=${SENTINEL_WORKSPACE_ID}
+      - AZURE_SUBSCRIPTION_ID=${AZURE_SUBSCRIPTION_ID}
+    volumes:
+      - ./chroma_db:/app/chroma_db
+      - ./data:/app/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
